@@ -8,33 +8,67 @@
     <title>Git</title>
   </head>
   <body>
-    <div>
-      <ul>
-        <li>git clone path-to-repository</li>
-        <!--статус текущего репозитория-->
-        <li>git status</li>
-        <!-- добавить новый файл под контроль гита-->
-        <li>git add path-to-file</li>
-        <!-- сохранить и дать комент -->
-        <li>git commit -am "added new file index.html"</li>
-        <!-- толкнуть закомиченое на сервер -->
-        <li>git push</li>
-        <!-- скачать с сервера свежие обновы -->
-        <li>git pull</li>
-        
-        <!-- добавить все созданные файлы -->
-        <li>git add . </li>
-        
-        <!-- gitk --all&     (открыть графическую оболочку гита, чтобы позырить все коммиты)
-ctrl + insert (копировать в буфер обмена) 
-shift + insert (вставить из буфера обмена) 
-git checkout commit-number (переключится на нужный коммит) -->
-        <li>gitk --all& </li>
-        
-        <!-- переключится на нужный коммит   (скорее всего прийдется удалить перед этим файл pacaje.lock.json) -->
-        <li>git checkout commit-number</li>
-      </ul>
-    </div>
+  <div>
+    <ul>
+      <li>git clone path-to-repository
+        <span>/ клонировать репо с гитхаб</span>
+      </li>
+
+      <li>git status
+        <span>/ статус текущего репозитория </span>
+      </li>
+
+      <li>git add path-to-file
+        <span>/добавить новый файл под контроль гита</span>
+      </li>
+
+      <li>git сheckout
+        <span>/для отмены изменений</span>
+      </li>
+
+      <li>git commit -am "added new file index.html"
+        <span>/сохранить и дать комент</span>
+      </li>
+
+      <li>git stash
+        <span>/закомитить изменнения файлов локально, не изменяя репозиторий</span>
+      </li>
+
+      <li>git push
+        <span>/толкнуть закомиченое на сервер</span>
+      </li>
+
+      <li>git pull
+        <span>/скачать с сервера свежие обновы</span>
+      </li>
+
+      <li>git add .
+        <span>/добавить все созданные файлы</span>
+      </li>
+
+      <li>git log
+        <span>/Получение списка произведенных изменений</span>
+      </li>
+
+      <li>gitk --all&
+        <span>/(открыть графическую оболочку гита, чтобы позырить все коммиты)
+          ctrl + insert (копировать в буфер обмена)
+          shift + insert (вставить из буфера обмена)
+          git checkout commit-number (переключится на нужный коммит)</span>
+      </li>
+
+      <li>git checkout commit-number
+        <span>
+             /переключится на нужный коммит   (скорее всего прийдется удалить перед этим файл pacaje.lock.json)
+        </span>
+      </li>
+
+      <li>cat .gitignore build/
+        <span>/Игнорировать все файлы в каталоге build/</span>
+      </li>
+
+    </ul>
+  </div>
   </body>
 
 </html>
