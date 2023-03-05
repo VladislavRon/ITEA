@@ -51,9 +51,8 @@ for(let elem in team){
 // о пользователе (например "Меня зовут John и я - Project manager. Я зарабатываю 4863$.").
 
 for(let elem in team){
-    team[elem].tellAboutYourSelf =  () => {
-        return (`"Меня зовут ${team[elem].name} и я - ${team[elem].position}. Я зарабатываю ${team[elem].salary}."`)
-    }
+    team[elem].tellAboutYourSelf =  () => `"Меня зовут ${team[elem].name} и я - ${team[elem].position}. Я зарабатываю ${team[elem].salary}."`
+
 }
 for(let elem in team){
     console.log(team[elem].tellAboutYourSelf())
@@ -73,10 +72,8 @@ for(let elem in team){
 
 team.showTeam = () => {
     for(let elem in team){
-        if(typeof team[elem] !== "function"){
-            console.log(`${team[elem].name} - ${team[elem].position}. Зарплата - ${team[elem].salary}.`)
-        }
-
+        typeof team[elem] !== "function" &&
+        console.log(`${team[elem].name} - ${team[elem].position}. Зарплата - ${team[elem].salary}.`)
     }
 }
 team.showTeam();
