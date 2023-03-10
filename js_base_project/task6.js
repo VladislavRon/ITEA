@@ -7,7 +7,7 @@
 const employees = [];
 
 for(let i=1;i<8;i++){
-    let newPerson = prompt('Enter your name');
+    let newPerson = prompt('We agree to take you to our team. Enter your name');
     employees.push(newPerson);
 }
 
