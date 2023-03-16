@@ -70,22 +70,25 @@ for(let elem in team){
 // создание team.showTeam = function() {...};
 // вызов метода showTeam();
 const table = document.querySelector('#table')
-team.showTeam = () => {
-    for(let elem in team){
-        if(typeof team[elem] !== "function") {
-        console.log(`${team[elem].name} - ${team[elem].position}. Зарплата - ${team[elem].salary}.`)
-        let tr = document.createElement('tr');
-        let td1 = document.createElement('td');
-        let td2 = document.createElement('td');
-        let td3 = document.createElement('td');
-        td1.innerHTML = `${team[elem].name}`
-        td2.innerHTML = `${team[elem].position}`
-        td3.innerHTML = `${team[elem].salary}`
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        table.appendChild(tr);
+Object.defineProperty(team, 'showTeam', {
+    value:() => {
+        for(let elem in team){
+            //if(typeof team[elem] !== "function") {
+                console.log(`${team[elem].name} - ${team[elem].position}. Зарплата - ${team[elem].salary}.`)
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
+                let td3 = document.createElement('td');
+                td1.innerHTML = `${team[elem].name}`
+                td2.innerHTML = `${team[elem].position}`
+                td3.innerHTML = `${team[elem].salary}`
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                table.appendChild(tr);
+            //}
         }
     }
-}
+
+})
 team.showTeam();
